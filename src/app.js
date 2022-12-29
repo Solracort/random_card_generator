@@ -21,21 +21,23 @@ window.onload = function() {
   let indicecarta = Math.floor(Math.random() * 13);
   let numcarta = document.querySelector(".numero");
   numcarta.innerHTML = nombrecarta[indicecarta];
-  let paloHTML = document.querySelector(".palo");
-  switch (indicepalo) {
-    case 0:
-      paloHTML.innerHTML = "<img src='/src/assets/img/hearts.png'/>";
-      break;
-    case 1:
-      paloHTML.innerHTML = "<img src='/src/assets/img/spades.png'/>";
-      break;
-    case 2:
-      paloHTML.innerHTML = "<img src='/src/assets/img/clubs.png'/>";
-      break;
-    case 3:
-      paloHTML.innerHTML = "<img src='/src/assets/img/hearts.png'/>";
-      break;
-    default:
-      console.log("default");
-  }
+  let paloHTML = document.querySelectorAll(".palo");
+  paloHTML.forEach((element)=>{
+    switch (indicepalo) {
+      case 0:
+        element.innerHTML = "<img class='imagen' src='/src/assets/img/hearts.png'/>";
+        break;
+      case 1:
+        element.innerHTML = "<img class='imagen' src='/src/assets/img/spades.png'/>";
+        break;
+      case 2:
+        element.innerHTML = "<img class='imagen' src='/src/assets/img/clubs.png'/>";
+        break;
+      case 3:
+        element.innerHTML = "<img class='imagen' src='/src/assets/img/diamond.png'/>";
+        break;
+      default:
+        console.log("default");
+      }
+  })    
 };
