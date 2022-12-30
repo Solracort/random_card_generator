@@ -15,7 +15,7 @@ const nombrecarta = [
   "Q",
   "K",
 ];
-window.onload = function() {
+window.onclick = function() {
   //write your code here
   let indicepalo = Math.floor(Math.random() * 4);
   let indicecarta = Math.floor(Math.random() * 13);
